@@ -1,0 +1,139 @@
+@import url(./variables.css);
+
+/* Arquivo com Funções Nativas de Ajustes de Tela (Responsividade) */
+/* Resolução de 320px até 567px: Medida de Tela para celulares com baixa resolução */
+/* Resolução de 568px até 768px: Medida de Tela para celulares com alta resolução */
+/* Resolução de 769px até 992px: Medida de Tela para Tablets */
+/* Resolução superior a 992px ou 998px: Medida de Tela para Notebook e Desktop */
+
+/* Significa que na medida mínima de 768px para cima ele vai quebrar o layoutMenu em flex com este gap, ao contrário não */
+/* Esta função é responsável pelo ajuste de tela nos dispositivos Tablet, Notebook e Desktop! */
+@media screen and (min-width: 768px) {
+
+    .layoutMenuDesktop {
+        text-align: right;
+        display: flex;
+        gap: 1.6rem;
+    }
+
+    .layoutMenuMobile {
+        display: none;
+    }
+
+    .boxForm {
+        margin: 3rem; /* Margem externa */
+        gap: 1.2rem;
+        display: grid; /* para converter a tela como se fosse uma "planilha de excel" */
+        grid-template-columns: 50% 50%;
+        align-items: center;
+    }
+
+    /* este display flex quebra o layout, inclusive quanto a reponsividade */
+    .layoutMenu {
+        display: flex;
+        gap: 22px; /* espaçamento entre os ítens do menu */
+    }
+
+    .end {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .formLogin {
+        height: 685px;
+        margin-bottom: 2rem;
+        background-color: var(--cor-cinza-light);
+        border-radius: 8px;
+        text-align: left;
+        padding: 2rem; /* espaçamento entre as colunas */
+        display: flex; 
+        flex-direction: column; /* para deixar no formato coluna */
+    }
+
+    .imgUser {
+        width: 320px;
+        border-radius: 50%;
+    }
+}
+
+/* Função de responsividade para celular */
+@media screen and (max-width: 768px) {
+
+    .layoutMenuDesktop {
+        display: none;
+    }
+
+    .layoutMenuMobile {
+        width: 100%;
+        left: -140%;
+        /* Significa que vai deixa-lo totalmente fora da tela, não ficará visível */
+        top: -30px;
+        padding: 4rem 0rem;
+        position: absolute;
+        background-color: var(--cor-laranja-vermelho);
+        color: var(--cor-branco);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .layoutMenuMobile.active {
+        left: 0;
+    }
+
+    .itemMenu {
+        margin: 1rem 0rem;
+    }
+
+    .linkMenuMobile {
+        text-decoration: none;
+        color: var(--cor-branco);
+    }
+
+    .bar {
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 5px auto;
+        background-color: var(--cor-branco);
+        transition: all 0.3s ease-in-out;
+        display: block;
+    }
+
+    .hamburguer {
+        cursor: pointer;
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .formLogin {
+        /* height: 685px; */
+        margin-bottom: 2rem;
+        background-color: var(--cor-cinza-light);
+        border-radius: 8px;
+        text-align: left;
+        padding: 2rem;
+        /* espaçamento entre as colunas */
+        display: flex;
+        /* para deixar no formato coluna */
+        flex-direction: column;
+    }
+
+    .imgUser {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 50%;
+    }
+}

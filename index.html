@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/logotipo_branco.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Projeto Web Front-End</title>
+</head>
+
+<body>
+    <!-- TAG header: Inicia a estrutura do conteúdo da página Web -->
+    <header id="topo">
+
+        <!-- O máximo de section permitidas: para section, main ou footer, tres section para cada. É totalmento proibido criar uma section dentro de outra section -->
+        <img src="images/logotipo_transparente.png" alt="Logotipo" title="Logotipo" class="imgLogotipo">
+        <section class="topo">
+
+            <!-- Versão Mobile -->
+            <ul class="layoutMenuMobile">
+                <li class="itemMenu">
+                    <a href="https://www.facebook.com.br" target="_blank" class="linkMenuMobile">Facebook</a>
+                </li>
+                <li class="itemMenu">
+                    <a href="https://www.instagram.com.br" target="_blank" class="linkMenuMobile">Instagram</a>
+                </li>
+                <li class="itemMenu">
+                    <a href="https://www.youtube.com.br" target="_blank" class="linkMenuMobile">Youtube</a>
+                </li>
+            </ul>
+
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Versão Desktop -->
+            <ul class="layoutMenuDesktop">
+                <li class="itemMenu">
+                    <a href="https://www.facebook.com.br" target="_blank" class="linkMenu">Facebook</a>
+                </li>
+                <li class="itemMenu">
+                    <a href="https://www.instagram.com.br" target="_blank" class="linkMenu">Instagram</a>
+                </li>
+                <li class="itemMenu">
+                    <a href="https://www.youtube.com.br" target="_blank" class="linkMenu">Youtube</a>
+                </li>
+            </ul>
+
+        </section>
+    </header>
+
+    <!-- TAG main: Centraliza o conteúdo principal da página Web -->
+    <main id="container">
+        <h1>Formulário de Login: Faça seu acesso.</h1>
+        <h2>Caso não tenha uma Conta, realize seu Cadastro.</h2>
+
+        <!-- Método de Envido de Dados POST: Envio de dados de forma oculta via protocolo HTTP/HTTPS -->
+        <!-- Método de Envido de Dados GET: Envia os dados de forma aberta e visivel, pela URL do seu Navegador -->
+        <!-- Caso o Formulário não receba a especificação do método de envio nativamente, ele será GET -->
+
+        <section class="boxForm">
+            <div class="formLogin">
+                <div class="boxImgUser">
+                    <img src="images/user.jpg" alt="Imagem do Usuário!" title="Imagem do Usuário!" class="imgUser">
+                </div>
+                <!-- Formulário de Login -->
+                <form action="index.html" method="get" name="formLogin" onsubmit="return ValidarCamposLogin()">
+                    <label>Digite seu E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite aqui..." class="campLogin">
+                    <label>Digite sua Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite aqui..." class="campLogin">
+                    <div class="boxBtnAcessar">
+                        <button name="btnLogin" class="btnLogin">Acessar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="formCadastro">
+
+                <!-- Formulário de Cadastro -->
+                <form action="index.html" method="get" name="formCadastro" onsubmit="return ValidarCamposCadastro()">
+                    <label>Digite seu Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite seu E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Selecione sua Data de Nascimento:</label>
+                    <input type="date" name="data" id="data" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite seu CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite seu Bairro:</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite o Nome da sua Rua:</label>
+                    <input type="text" name="rua" id="rua" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite o número do Local</label>
+                    <input type="text" name="numero" id="numero" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite o CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite um complemento:</label>
+                    <input type="text" name="complemento" id="complemento" placeholder="Digite aqui..."
+                        class="campCadastro">
+                    <label>Digite uma Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite aqui..." class="campCadastro">
+                    <label>Digite novamente sua senha:</label>
+                    <input type="password" name="repSenha" id="repSenha" placeholder="Digite aqui..."
+                        class="campCadastro">
+                    <button name="btnCadastrar" class="btnCadastrar">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- TAG footer: Encerramento de conteúdo da página web -->
+    <footer id="end">
+        <section class="end">
+            <p>Copyright @ 2024 - Todos os direitos.</p>
+            <img src="images/logotipo_branco.png" alt="Logotipo" title="Logotipo" class="imgLogotipoEnd">
+        </section>
+    </footer>
+
+    <!-- Chamada do Arquivo Javascript -->
+    <script src="js/validar_campos.js"></script>
+    <script src="js/menu_mobile.js"></script>
+</body>
+
+</html>

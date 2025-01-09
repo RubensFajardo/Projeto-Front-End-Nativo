@@ -1,0 +1,27 @@
+/* Instalação dos nossos arquivos de fontes */
+
+/* Função nativa do css para instalação de fontes */
+@font-face {
+    font-family: Poppins-Thin;
+    src: url(./fonts/poppins/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url(./fonts/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(./fonts/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Black;
+    src: url(./fonts/poppins/Poppins-Black.ttf);
+}
